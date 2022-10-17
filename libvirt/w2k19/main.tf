@@ -35,6 +35,7 @@ resource "libvirt_domain" "w2k19" {
 
   disk {
     volume_id = libvirt_volume.w2k19-qcow2.id
+    scsi      = "true"
   }
 
   disk {
@@ -42,7 +43,7 @@ resource "libvirt_domain" "w2k19" {
   }
 
   graphics {
-    type        = "vnc"
+    type        = "spice"
     listen_type = "address"
   }
 }

@@ -36,6 +36,7 @@ resource "libvirt_domain" "w2k19" {
   disk {
     volume_id = libvirt_volume.w2k19-qcow2.id
     scsi      = "true"
+    
   }
 
   disk {
